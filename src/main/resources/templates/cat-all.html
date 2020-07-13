@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>FDMC <3</title>
+</head>
+<body>
+    <a href="/">Back to Home</a>
+    <th:block th:each="cat : ${cats}" th:object="${cat}">
+        <ul>
+            <h1><td th:text="${cat.getName()}" /></h1>
+            <li>Breed: <td th:text="${cat.getBreed()}" /></li>
+            <li>Colour: <td th:text="${cat.getColour()}" /></li>
+            <li>Age: <td th:text="${cat.getAge()}" /></li>
+        </ul>
+        <hr/>
+    </th:block>
+</body>
+</html>
